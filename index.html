@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nargess Ovesy — Professional Journey & News</title>
+<meta name="description" content="Personal weblog of Nargess Ovesy: energy, power systems, infrastructure advisory and career notes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#faf8f5; --card:#ffffff; --ink:#1d2430; --muted:#6b7280; --line:#e8e3dc;
+  --accent:#0f766e; --accent-2:#f59e0b; --accent-soft:#e0f2f1; --radius:16px;
+  --shadow:0 6px 24px rgba(20,30,50,.07);
+}
+[data-theme="dark"]{
+  --bg:#0f1419; --card:#171e26; --ink:#e8ecf1; --muted:#9aa5b1; --line:#26303b;
+  --accent:#2dd4bf; --accent-2:#fbbf24; --accent-soft:#12302e; --shadow:0 6px 24px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.65;transition:background .25s,color .25s}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.2;margin:0 0 .5em}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+/* header */
+header.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-family:Fraunces,serif;font-weight:700;font-size:1.2rem;color:var(--ink)}
+.brand span{color:var(--accent)}
+.nav nav{display:flex;gap:22px;align-items:center}
+.nav nav a{color:var(--ink);font-size:.94rem;font-weight:500}
+.icon-btn{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;width:38px;height:38px;cursor:pointer;font-size:1rem}
+@media(max-width:680px){.nav nav a.hide-m{display:none}}
+
+/* hero */
+.hero{padding:76px 0 56px}
+.hero .grid{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center}
+.eyebrow{display:inline-block;background:var(--accent-soft);color:var(--accent);padding:6px 14px;border-radius:999px;font-size:.82rem;font-weight:600;margin-bottom:18px}
+.hero h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:700}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{font-size:1.1rem;color:var(--muted);max-width:54ch}
+.cta{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:600;font-size:.95rem;border:1px solid var(--accent);cursor:pointer}
+.btn.primary{background:var(--accent);color:#fff}
+[data-theme="dark"] .btn.primary{color:#0f1419}
+.btn.ghost{background:transparent;color:var(--accent)}
+.btn:hover{text-decoration:none;transform:translateY(-1px)}
+.profile{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:var(--shadow)}
+.avatar{width:132px;height:132px;border:4px solid var(--accent-soft);box-shadow:var(--shadow);border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:grid;place-items:center;color:#fff;font-family:Fraunces,serif;font-size:2.2rem;font-weight:700;margin-bottom:16px;overflow:hidden}
+.avatar img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.profile h3{margin-bottom:2px}
+.profile .role{color:var(--muted);font-size:.93rem;margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:.78rem;padding:4px 11px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:600}
+@media(max-width:820px){.hero .grid{grid-template-columns:1fr}}
+
+section{padding:56px 0}
+.section-title{display:flex;justify-content:space-between;align-items:end;margin-bottom:26px;gap:16px;flex-wrap:wrap}
+.section-title h2{font-size:2rem;margin:0}
+.section-title p{margin:0;color:var(--muted)}
+
+/* news */
+.news{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.news-item{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent-2);border-radius:var(--radius);padding:18px 20px}
+.news-item time{font-size:.78rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+.news-item h3{font-size:1.05rem;margin:6px 0 4px;font-family:Inter,sans-serif;font-weight:600}
+.news-item p{margin:0;color:var(--muted);font-size:.93rem}
+
+/* posts */
+.toolbar{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+.toolbar input{flex:1;min-width:200px;padding:12px 16px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.filter{padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;font:inherit;font-size:.88rem;font-weight:500}
+.filter.active{background:var(--accent);border-color:var(--accent);color:#fff}
+[data-theme="dark"] .filter.active{color:#0f1419}
+.posts{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
+.post-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;cursor:pointer;transition:transform .2s}
+.post-card:hover{transform:translateY(-4px)}
+.cover{height:120px;display:flex;align-items:flex-end;padding:14px 18px;color:#fff;font-weight:600;font-size:.8rem;letter-spacing:.05em;text-transform:uppercase}
+.post-body{padding:20px;display:flex;flex-direction:column;flex:1}
+.meta{font-size:.82rem;color:var(--muted);margin-bottom:8px}
+.post-body h3{font-size:1.25rem}
+.post-body p{color:var(--muted);margin:0 0 14px;font-size:.95rem;flex:1}
+.read{font-weight:600;font-size:.9rem}
+.empty{color:var(--muted);padding:30px 0}
+
+/* timeline */
+.timeline{position:relative;margin-left:8px;padding-left:30px;border-left:2px solid var(--line)}
+.t-item{position:relative;margin-bottom:30px}
+.t-item::before{content:"";position:absolute;left:-39px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--accent);border:3px solid var(--bg)}
+.t-item .when{font-size:.82rem;font-weight:600;color:var(--accent)}
+.t-item h3{font-size:1.2rem;margin:2px 0}
+.t-item .org{color:var(--muted);font-size:.93rem;margin-bottom:6px}
+.t-item p{margin:0}
+
+/* article view */
+#article{display:none;padding:48px 0 80px}
+.article{max-width:720px;margin:0 auto}
+.back{display:inline-block;margin-bottom:24px;font-weight:600;cursor:pointer}
+.article h1{font-size:clamp(2rem,4.5vw,2.9rem)}
+.article .meta{margin-bottom:28px}
+.article .content{font-size:1.07rem}
+.article .content h2{font-size:1.5rem;margin-top:1.8em}
+.article .content blockquote{border-left:4px solid var(--accent);margin:1.5em 0;padding:4px 18px;color:var(--muted);font-style:italic}
+.article .content ul{padding-left:1.2em}
+.article .content code{background:var(--accent-soft);padding:2px 6px;border-radius:6px;font-size:.92em}
+
+/* about + mentoring */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:820px){.about{grid-template-columns:1fr}}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+.panel h3{font-size:1.3rem}
+.panel p{color:var(--muted);margin:0 0 14px}
+.facts{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.facts li{display:flex;gap:12px;align-items:flex-start}
+.facts .em{font-size:1.25rem;line-height:1.4}
+.help-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:22px}
+.help{background:var(--accent-soft);border-radius:var(--radius);padding:18px}
+.help h4{margin:0 0 4px;font-size:1rem;color:var(--accent)}
+.help p{margin:0;font-size:.92rem;color:var(--ink)}
+.mentor{margin-top:22px;background:linear-gradient(135deg,var(--accent),#115e59);color:#fff;border:none}
+[data-theme="dark"] .mentor{background:linear-gradient(135deg,#134e4a,#0f2f2d)}
+.mentor h3,.mentor p{color:#fff}
+.mentor .eyebrow{background:rgba(255,255,255,.18);color:#fff}
+.sessions{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:20px 0}
+.session{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:16px}
+.session .dur{font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;opacity:.85}
+.session h4{margin:4px 0;font-size:1.05rem}
+.session p{font-size:.9rem;margin:0;opacity:.92}
+.mentor .btn{background:#fff;color:#0f766e;border-color:#fff}
+.mentor .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+.how{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px;font-size:.88rem;opacity:.95}
+.how span{background:rgba(255,255,255,.14);padding:4px 12px;border-radius:999px}
+
+/* contact + footer */
+.contact{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:36px;text-align:center;box-shadow:var(--shadow)}
+.contact .links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.88rem;text-align:center}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#" onclick="goHome(event)">Nargess<span>.</span>Ovesy</a>
+    <nav>
+      <a class="hide-m" href="#news" onclick="goHome(event,'news')">News</a>
+      <a href="#posts" onclick="goHome(event,'posts')">Blog</a>
+      <a class="hide-m" href="#journey" onclick="goHome(event,'journey')">Journey</a>
+      <a class="hide-m" href="#about" onclick="goHome(event,'about')">About & Mentoring</a>
+      <a class="hide-m" href="#contact" onclick="goHome(event,'contact')">Contact</a>
+      <button class="icon-btn" id="themeBtn" aria-label="Toggle dark mode">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<main id="home">
+  <div class="wrap hero">
+    <div class="grid">
+      <div>
+        <span class="eyebrow" id="heroTag"></span>
+        <h1 id="heroTitle"></h1>
+        <p id="heroText"></p>
+        <div class="cta">
+          <a class="btn primary" href="#posts" onclick="goHome(event,'posts')">Read the blog</a>
+          <a class="btn ghost" href="#journey" onclick="goHome(event,'journey')">My journey</a>
+          <a class="btn ghost" href="#mentoring" onclick="goHome(event,'mentoring')">Book a mentoring session</a>
+        </div>
+      </div>
+      <aside class="profile">
+        <div class="avatar" id="avatar"></div>
+        <h3 id="pName"></h3>
+        <div class="role" id="pRole"></div>
+        <div class="chips" id="pChips"></div>
+      </aside>
+    </div>
+  </div>
+
+  <section id="news"><div class="wrap">
+    <div class="section-title"><h2>Latest news</h2><p>Quick updates on projects, talks and milestones</p></div>
+    <div class="news" id="newsList"></div>
+  </div></section>
+
+  <section id="posts"><div class="wrap">
+    <div class="section-title"><h2>The blog</h2><p>Longer notes on work, learning and the energy transition</p></div>
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="Search posts…" aria-label="Search posts">
+      <div class="filters" id="filters"></div>
+    </div>
+    <div class="posts" id="postList"></div>
+  </div></section>
+
+  <section id="journey"><div class="wrap">
+    <div class="section-title"><h2>My professional journey</h2><p>Where I've been and where I'm heading</p></div>
+    <div class="timeline" id="timeline"></div>
+  </div></section>
+
+  <section id="about"><div class="wrap">
+    <div class="section-title"><h2>Get to know me</h2><p>A bit beyond the CV — and where I can help</p></div>
+    <div class="about">
+      <div class="panel"><h3>A little about me</h3><p id="aboutText"></p><ul class="facts" id="facts"></ul></div>
+      <div class="panel"><h3>How I can help</h3><p>Happy to share what I've learned — whether you're early in your career or making a switch.</p>
+        <div class="chips" id="helpChips"></div></div>
+    </div>
+    <div class="help-grid" id="helpGrid"></div>
+
+    <div class="panel mentor" id="mentoring">
+      <span class="eyebrow">Free mentoring</span>
+      <h3 id="mTitle"></h3>
+      <p id="mText"></p>
+      <div class="sessions" id="sessions"></div>
+      <div class="cta" style="margin-top:0">
+        <a class="btn" id="bookBtn" target="_blank" rel="noopener">📅 Book a session in my calendar</a>
+        <a class="btn ghost" id="mailBtn">✉️ Prefer email? Request a time</a>
+      </div>
+      <div class="how" id="mHow" style="margin-top:16px"></div>
+    </div>
+  </div></section>
+
+  <section id="contact"><div class="wrap">
+    <div class="contact">
+      <h2>Let's connect</h2>
+      <p style="color:var(--muted);max-width:52ch;margin:0 auto">Always happy to chat about energy systems, power-sector reform, infrastructure advisory or career paths.</p>
+      <div class="links" id="links"></div>
+    </div>
+  </div></section>
+</main>
+
+<main id="article"><div class="wrap"><div class="article">
+  <a class="back" onclick="goHome(event,'posts')">← Back to all posts</a>
+  <div id="articleBody"></div>
+</div></div></main>
+
+<footer><div class="wrap">© <span id="year"></span> Nargess Ovesy. Views expressed are my own and do not represent my employer or clients.</div></footer>
+
+<script>
+/* =====================================================================
+   EDIT THIS SECTION ONLY — everything on the site is driven by this data
+   ===================================================================== */
+const SITE = {
+  name: "Nargess Ovesy",
+  initials: "NO",
+  photo: "profile.jpg",
+  role: "Senior Consultant at CPCS · Ex-Deloitte · Canada",
+  tag: "Infrastructure · Energy & Power Advisory · Decarbonization",
+  title: "Notes on my <em>professional journey</em> in the energy transition.",
+  intro: "I'm a Senior Consultant at CPCS, a boutique infrastructure consulting firm, working across transportation decarbonization, energy and public-sector advisory. This is where I share what I'm learning, what I'm working on, and news from along the way.",
+  skills: ["Energy transition strategy","Power systems modelling","Climate & decarbonization","Economic modelling","Policy analysis","Sustainable transportation"],
+  links: [
+    {label:"LinkedIn", url:"https://www.linkedin.com/in/nargess-ovesy/"},
+    {label:"Email me", url:"mailto:nargess.ovesy@gmail.com"}
+  ]
+};
+
+const ABOUT = {
+  text: "I'm a problem solver who enjoys collaborative teams and turning complex energy and infrastructure questions into clear, practical advice. My background combines a BSc in Industrial Engineering with an MSc in Business Administration (UBC Sauder) focused on green transportation and logistics.",
+  facts: [
+    {e:"🌍", t:"My work spans both emerging and advanced markets, from Canada to Africa and the Caribbean."},
+    {e:"🎓", t:"Industrial Engineering (BSc) → Business Administration (MSc), UBC Sauder."},
+    {e:"⚡", t:"Currently levelling up in grid and transmission modelling."},
+    {e:"🏋️", t:"Fitness and wellness keep me balanced."},
+    {e:"🇩🇪", t:"Learning German, one lesson at a time."}
+  ],
+  help: ["Energy & power careers","Moving from Big 4 to advisory","Consulting proposals & EOIs","Getting started with Python modelling","Grad school & PhD paths","Networking & outreach"],
+  cards: [
+    {t:"Breaking into energy consulting", d:"What teams look for, how to position your experience, and where to start."},
+    {t:"Career switches", d:"Lessons from moving between firms, teams and geographies."},
+    {t:"Technical learning plans", d:"A realistic path into Python, Jupyter and power-system modelling."},
+    {t:"CV, outreach & interview prep", d:"Sharper CVs, networking messages and ways to tell your story."}
+  ]
+};
+
+const MENTORING = {
+  title: "Book a mentoring session",
+  text: "I set aside time each month to chat with students, alumni and early-career professionals. Pick a slot that suits you and tell me what you'd like to focus on.",
+  /* PASTE YOUR BOOKING LINK HERE — e.g. Microsoft Bookings, Outlook "Bookings with me",
+     Calendly, Cal.com or Google Calendar appointment page */
+  bookingUrl: "https://calendar.app.google/9MH9HYaJy1LJYMgdA",
+  email: "mailto:nargess.ovesy@gmail.com",
+  sessions: [
+    {d:"20 min", t:"Intro chat", p:"A quick conversation to get to know each other and answer a question."},
+    {d:"45 min", t:"Career conversation", p:"CV, career path or switch — bring your questions."},
+    {d:"50 min", t:"Deep dive", p:"Technical learning plan, application review or mock interview."}
+  ],
+  how: ["💻 Video call","🆓 Free of charge","🌐 Open to students & alumni (e.g. UBC Sauder)","🕒 Eastern Time (Toronto)"]
+};
+
+const NEWS = [
+  {date:"2026-06-01", title:"Joined CPCS as Senior Consultant", text:"Moving from Deloitte into boutique infrastructure advisory across transportation, energy and public sector."},
+  {date:"2026-10-22", title:"Blog launched 🎉", text:"Welcome! I'll be sharing updates and reflections here."},
+  {date:"2026-10-09", title:"New learning goal", text:"Building deeper skills in grid and transmission modelling."},
+  {date:"2026-09-15", title:"Getting hands-on with PyPSA", text:"Setting up an open-source power-system modelling workflow."}
+];
+
+const JOURNEY = [
+  {when:"Jun 2026 – Present", role:"Senior Consultant", org:"CPCS", text:"Boutique infrastructure consulting firm: transportation, energy and public-sector advisory."},
+  {when:"Jun 2025 – Jun 2026", role:"Senior Consultant", org:"Deloitte · Canada", text:"Energy transition work spanning storage and batteries, DERs, carbon markets, flexibility and demand response, grid modernization and interconnection, industrial decarbonization, and sustainable transportation."},
+  {when:"Sep 2023 – Jun 2025", role:"Business Consultant", org:"Deloitte · Vancouver, BC", text:"Sustainability and climate change, energy modelling, economic modelling and policy analysis."},
+  {when:"Sep 2021 – Sep 2023", role:"Business Consultant", org:"The University of British Columbia · Vancouver, BC", text:"Economic modelling of supply and demand in the Canadian aviation sector, a green-shipping data project analysing IMO decision-making, and technical solutions for air cargo companies moving toward net zero."},
+  {when:"Education", role:"MSc, Business Administration", org:"UBC Sauder School of Business", text:"Specialized in green transportation and logistics."},
+  {when:"Education", role:"BSc, Industrial Engineering", org:"", text:"A strong analytical and operational foundation for consulting work."}
+];
+
+/* Categories are created automatically from the posts. To add a post, copy
+   one block, give it a unique "slug", and paste it at the TOP of the list.
+   "content" is plain HTML (use <p>, <h2>, <ul>, <blockquote>, <a>, <img>). */
+const POSTS = [
+  {
+    slug:"hello-world",
+    title:"Hello, world: why I'm starting this blog",
+    date:"2026-10-22", category:"Career", read:"2 min",
+    color:"linear-gradient(135deg,#0f766e,#14b8a6)",
+    excerpt:"A place to document what I'm learning, building and thinking about as my career evolves.",
+    content:`
+      <p>I've spent my career at the intersection of energy, infrastructure and analytics. Much of that work happens behind closed doors, so this blog is my way of sharing the <em>lessons</em> that can be shared.</p>
+      <h2>What you'll find here</h2>
+      <ul>
+        <li><strong>News</strong> — short updates and milestones.</li>
+        <li><strong>Learning notes</strong> — what I'm studying and how it works in practice.</li>
+        <li><strong>Career reflections</strong> — transitions, mentors and advice I wish I'd had earlier.</li>
+      </ul>
+      <blockquote>Nothing here refers to confidential client work.</blockquote>
+      <p>Thanks for reading — I'd love to hear from you.</p>`
+  },
+  {
+    slug:"learning-pypsa",
+    title:"Learning power-system modelling with PyPSA",
+    date:"2026-10-13", category:"Learning", read:"4 min",
+    color:"linear-gradient(135deg,#1d4ed8,#38bdf8)",
+    excerpt:"Moving from generation dispatch toward grid and transmission modelling — my learning plan.",
+    content:`
+      <p>I'm comfortable with generation dispatch modelling, but I want to go deeper on the <strong>network side</strong>: transmission constraints, power flow and grid expansion.</p>
+      <h2>My plan</h2>
+      <ul>
+        <li>Set up a reproducible Python environment (Anaconda, JupyterLab, VS Code).</li>
+        <li>Work through open PyPSA examples and rebuild them myself.</li>
+        <li>Learn when DC approximations are enough, and when AC power flow matters.</li>
+      </ul>
+      <p>I'll post what I learn, including mistakes. <em>()</em></p>`
+  },
+  {
+    slug:"big4-to-advisory",
+    title:"From a Big 4 firm to infrastructure advisory",
+    date:"2026-10-05", category:"Career", read:"3 min",
+    color:"linear-gradient(135deg,#b45309,#f59e0b)",
+    excerpt:"Reflections on changing firms, teams and geographies while staying in the energy space.",
+    content:`
+      <p>Moving from a large professional-services firm to a specialist infrastructure advisory shop changed how I work day to day.</p>
+      <h2>What changed</h2>
+      <ul>
+        <li>Closer contact with technical detail and project teams.</li>
+        <li>Work across emerging markets and varied regulatory contexts.</li>
+        <li>More ownership over proposals and methodology.</li>
+      </ul>
+      <p><em>()</em></p>`
+  },
+  {
+    slug:"electricity-price-dynamics",
+    title:"A beginner's map of electricity price dynamics, UK edition",
+    date:"2026-10-28", category:"Energy Notes", read:"5 min",
+    color:"linear-gradient(135deg,#7c3aed,#c084fc)",
+    excerpt:"Tariff structures, time-of-use rates and what actually drives the price on your bill.",
+    content:`
+      <p>EA UK electricity bill combines energy, capacity, delivery and policy components. In Great Britain, the household bill is made up of wholesale, network, policy and supplier costs. Each piece moves for different reasons, which is why bills can rise even when one part of the system looks cheap.
+      <h1>A beginner's map of electricity price dynamics: the UK edition</h1>
+<p><em>October 28, 2026 · Energy Notes</em></p>
+
+<p>A UK electricity bill combines <strong>energy</strong>, <strong>capacity</strong>, <strong>delivery</strong> and <strong>policy</strong> components. In Great Britain, the household bill is made up of wholesale, network, policy and supplier costs. Each piece moves for different reasons, which is why bills can rise even when one part of the system looks cheap.</p>
+
+<h2>The four building blocks</h2>
+<ul>
+  <li><strong>Energy (wholesale):</strong> What suppliers pay generators. It is the largest single element of a household bill, at 38% (£333) of the Q2 2026 price cap for a typical direct debit customer.</li>
+  <li><strong>Capacity:</strong> Payments that keep generators available at times of peak demand. In the UK this is the Capacity Market.</li>
+  <li><strong>Delivery (networks):</strong> The cost of moving power through the transmission and local distribution grids. Consumer network costs rose from £239 to £339 over five years. Transmission investment under RIIO-3 could reach £70bn over five years, with costs recovered gradually.</li>
+  <li><strong>Policy:</strong> Levies that fund government schemes. They include the Renewables Obligation, Contracts for Difference (CfD) and the Capacity Market.</li>
+</ul>
+<p>Wholesale and network costs together make up around 60% of total charges, and system management adds about 3%.</p>
+
+<h2>1. Wholesale market clearing and marginal pricing</h2>
+<p>Wholesale prices are not regulated. They are set by trading, including on the day-ahead market. Generators bid at their short-run marginal cost (SRMC), meaning the cost of producing one more unit. Wind and solar have very low SRMCs because they use no fuel, while gas plants have high ones because they burn fuel.</p>
+<p>Bids are accepted from cheapest to most expensive until demand is met, which is called the <strong>merit order</strong>. The last unit needed sets the price, and in the UK that is often gas. This is <strong>marginal pricing</strong>: the most expensive source in the short-term auctions sets the price for all electricity traded in them.</p>
+<p>That is why gas can set the price even when it supplies a shrinking share of generation. It also explains the current squeeze: the Ofgem price cap rise from 1 October 2026 reflects higher wholesale gas prices caused by the conflict in the Middle East. Prices are still well below the 2022 crisis peak. In April 2026 the government announced measures that include breaking the link between gas and electricity prices in the wholesale market.</p>
+<p>Wholesale prices also get passed through slowly. Suppliers buy over a range of timescales, from years ahead to days or hours ahead. Ofgem takes wholesale prices into account when it sets the cap each quarter.</p>
+
+<h2>2. Time-of-use vs. tiered vs. flat rates</h2>
+<p><strong>Flat (single-rate):</strong> You pay the same unit rate all day. For 1 October to 31 December 2026, the cap on a default tariff paid by Direct Debit averages 26.32p/kWh across England, Scotland and Wales. The cap applies to default tariffs only. If you are on a fixed deal, it doesn't change your rate.</p>
+<p><strong>Time-of-use (TOU):</strong> The rate depends on when you use power. There are three main versions:</p>
+<table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>How it works</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Economy 7</strong></td>
+      <td>Seven cheap hours overnight, usually midnight to 7am, with a higher day rate. It generally only pays off if about 40% or more of your use falls in the cheap window.</td>
+    </tr>
+    <tr>
+      <td><strong>Smart off-peak</strong> (e.g. Octopus Go)</td>
+      <td>Fixed cheap slots at a low rate, with a standard rate the rest of the time.</td>
+    </tr>
+    <tr>
+      <td><strong>Agile / half-hourly</strong></td>
+      <td>The unit rate changes every 30 minutes, tracking the wholesale spot price.</td>
+    </tr>
+  </tbody>
+</table>
+<p>Off-peak rates on the best 2026 EV and smart tariffs are often around 7p–10p/kWh. Peak rates commonly run 30p–45p/kWh, above the cap, so TOU only wins if you can shift a meaningful share of use. The best candidates are EV charging, heat pumps, storage heaters and home batteries. All TOU tariffs require a smart meter.</p>
+<p><strong>Tiered (block) rates:</strong> These charge more as you use more. They are common in some other markets, but not how GB retail tariffs normally work. Here, differences by time of day (TOU) and by location (regional caps) matter more than usage blocks. Note that the cap does vary by region, payment method and meter type, so there is no single national rate.</p>
+<p><strong>Where this is heading:</strong> Market-wide half-hourly settlement (MHHS) will bill suppliers on actual half-hourly smart-meter data instead of estimated profile classes. Meter migration began in October 2025 and full migration completes by May 2027. That makes it easier for suppliers to offer TOU products.</p>
+
+<h2>3. Fixed vs. variable charges</h2>
+<p>A typical bill is simple: <strong>unit rate × kWh used + daily standing charge</strong>.</p>
+<ul>
+  <li><strong>Variable charge (unit rate):</strong> You pay for each kWh you use, so it rises and falls with consumption.</li>
+  <li><strong>Fixed charge (standing charge):</strong> You pay a daily amount regardless of use. From 1 October to 31 December 2026 it averages 54.83p per day for electricity on a default tariff paid by Direct Debit. That is roughly £200 a year (0.5483 × 365 ≈ £200).</li>
+  <li><strong>Why it differs by location:</strong> Standing charges depend on how many people live in your region, average regional energy use, how much energy the supplier needs to buy, and the cost of building and improving the network.</li>
+</ul>
+<p>Because the standing charge is paid regardless of use, it weighs most heavily on low-use households.</p>
+<p><strong>Fixed vs. variable tariffs:</strong> This is a separate meaning of "fixed". A fixed tariff locks in your rates until the deal ends, while a variable tariff such as the default (SVT) moves with the cap each quarter.</p>
+
+<h2>What changed this winter</h2>
+<ul>
+  <li>The price cap is <strong>£1,723 a year</strong> for a typical dual-fuel Direct Debit household, up 4% on the previous period.</li>
+  <li><strong>VAT on electricity is removed</strong> from 1 October 2026 to 31 March 2027, while gas still carries 5% VAT. Ofgem notes that costs can't be compared directly with earlier periods because of this change.</li>
+</ul>
+
+<h2>Quick takeaways</h2>
+<ol>
+  <li>Wholesale sets the baseline, but networks and policy make up much of the rest.</li>
+  <li>Marginal pricing means gas often sets the price, even when it isn't the biggest source.</li>
+  <li>TOU tariffs reward flexibility, and flat rates reward simplicity.</li>
+  <li>Standing charges matter most when you use little electricity.</li>
+</ol>
+      <p><em></em></p>`
+      
+      
+  },
+  {
+    slug:"electricity-tariffs-canada",
+    title:"A beginner's map of electricity tariffs, Canada edition",
+    date:"2026-10-28", category:"Energy Notes", read:"6 min",
+    color:"linear-gradient(135deg,#dc2626,#f87171)",
+    excerpt:"Time-of-use, tiered and market-based rates across Ontario, BC, Québec and Alberta, and what drives the price on your bill.",
+    content:`
+      <p>Canada has no single national electricity tariff. Each province regulates (or deregulates) its own prices, so the same kilowatt-hour can be priced in very different ways depending on where you live. This note walks through Ontario, British Columbia, Québec and Alberta, using the same lens as my UK post: time-of-use, tiered and flat rates, plus fixed vs. variable charges.</p>
+<br><br>
+<h2>The big picture</h2>
+<table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Province</th>
+      <th>Who sets the price</th>
+      <th>Main design</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Ontario</strong></td>
+      <td>Ontario Energy Board (OEB), reset every Nov 1</td>
+      <td>Choice of time-of-use, ultra-low overnight or tiered</td>
+    </tr>
+    <tr>
+      <td><strong>British Columbia</strong></td>
+      <td>BC Utilities Commission (BCUC)</td>
+      <td>Two-step tiered rate</td>
+    </tr>
+    <tr>
+      <td><strong>Québec</strong></td>
+      <td>Hydro-Québec rates, updated each April 1</td>
+      <td>Two-block rate, with an optional dynamic winter rate</td>
+    </tr>
+    <tr>
+      <td><strong>Alberta</strong></td>
+      <td>Competitive retail market, with a regulated default</td>
+      <td>Retailer plans (fixed or variable), plus regulated delivery</td>
+    </tr>
+  </tbody>
+</table>
+<br><br>
+<h2>1. Ontario: three plans, reset once a year</h2>
+<p>Most Ontario households and small businesses are on the Regulated Price Plan (RPP). The OEB sets the prices once a year on November 1, and customers can choose between three rate types. With time-of-use and ultra-low overnight, the price depends on when you use electricity. With tiered, it depends on how much you use in a month.</p>
+<p><strong>Time-of-use (TOU), winter prices from Nov 1, 2026:</strong></p>
+<table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Period</th>
+      <th>Hours</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Off-peak</strong></td>
+      <td>Weekdays 7 p.m. to 7 a.m., all day weekends and holidays</td>
+      <td>9.1¢/kWh</td>
+    </tr>
+    <tr>
+      <td><strong>Mid-peak</strong></td>
+      <td>Weekdays 11 a.m. to 5 p.m.</td>
+      <td>14.6¢/kWh</td>
+    </tr>
+    <tr>
+      <td><strong>On-peak</strong></td>
+      <td>Weekdays 7 a.m. to 11 a.m. and 5 p.m. to 7 p.m.</td>
+      <td>18.9¢/kWh</td>
+    </tr>
+  </tbody>
+</table>
+<p>TOU hours change with the season, and the winter hours above start on November 1.</p>
+<p><strong>Ultra-low overnight (ULO), year-round:</strong></p>
+<table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Period</th>
+      <th>Hours</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Ultra-low overnight</strong></td>
+      <td>Every day 11 p.m. to 7 a.m.</td>
+      <td>3.7¢/kWh</td>
+    </tr>
+    <tr>
+      <td><strong>Weekend off-peak</strong></td>
+      <td>Weekends and holidays 7 a.m. to 11 p.m.</td>
+      <td>9.1¢/kWh</td>
+    </tr>
+    <tr>
+      <td><strong>Mid-peak</strong></td>
+      <td>Weekdays 7 a.m. to 4 p.m. and 9 p.m. to 11 p.m.</td>
+      <td>14.6¢/kWh</td>
+    </tr>
+    <tr>
+      <td><strong>On-peak</strong></td>
+      <td>Weekdays 4 p.m. to 9 p.m.</td>
+      <td>37.7¢/kWh</td>
+    </tr>
+  </tbody>
+</table>
+<p>ULO pays off for households that can move a lot of load overnight, such as EV charging, and keep use low during the 4 to 9 p.m. peak.</p>
+<p><strong>Tiered:</strong> A residential customer pays 11.2¢/kWh for the first 1,000 kWh per month in winter and 13.2¢/kWh above that. The seasonal threshold gives residential customers an extra 400 kWh a month at the lower price in winter. For example, a home using 1,200 kWh in a winter month pays (1,000 × 11.2¢) + (200 × 13.2¢) = $138.40 for the electricity commodity charge, before delivery and other charges.</p>
+<p><strong>Why the price isn't just the market price:</strong> RPP prices are set to recover the forecast cost of supplying RPP customers over 12 months. The forecast average market price is about 6.99¢/kWh, but customers also pay the Global Adjustment, which covers the cost of new and refurbished generation, contracts and conservation programs. For RPP customers, the Global Adjustment is already built into the prices.</p>
+<p><strong>The rebate matters too:</strong> RPP prices are decreasing year over year, which allows the Ontario Electricity Rebate (OER) to change to 15.7% from Nov 1, 2026. The overall rate of increase in customer bills stays consistent with previous years. For a typical home using 700 kWh a month, the OER reduces the bill by about $23 each month.</p>
+<br><br>
+<h2>2. British Columbia: tiered, not time-of-use</h2>
+<p>BC Hydro uses a two-step rate. As of July 1, 2026, the first 1,376 kWh in a 62-day billing period costs $0.1187/kWh, and every kWh above that costs $0.1408/kWh. Residential customers are typically billed every two months. There is also a basic charge of $0.2344 per day.</p>
+<p>This is a conservation signal rather than a timing signal. Heavy users (electric heating, EV charging) pay more on their marginal kWh, but it doesn't matter whether they use power at 3 a.m. or 6 p.m.</p>
+<br><br>
+<h2>3. Québec: low base rate, optional dynamic pricing</h2>
+<p>Hydro-Québec raised domestic rates by 3% on April 1, 2026. Under the default Rate D, there is a system access charge of 46.154¢ per day, the first 40 kWh per day costs 7.065¢/kWh, and the remaining energy costs 11.142¢/kWh.</p>
+<p>For customers who can adjust their winter use, Rate Flex D offers cheaper winter energy outside peak demand events (4.886¢/kWh for the first 40 kWh per day and 9.103¢ after that). Energy used during a peak demand event costs 46.463¢/kWh. That is the trade-off: a lower price most of the winter in exchange for careful use during critical hours.</p>
+<br><br>
+<h2>4. Alberta: a competitive market with a regulated default</h2>
+<p>Alberta is the odd one out. You can choose a retailer and a plan, either fixed or variable. If you don't choose, you are on the Rate of Last Resort, which is fixed at 12.06¢/kWh in ENMAX areas such as Calgary, 12.01¢ in EPCOR and FortisAlberta areas, and 12.02¢ in ATCO areas, through December 31, 2026. The price for 2027 and 2028 must be filed by about December 2, 2026, and it can move no more than 10% up or down.</p>
+<p>The energy charge is only part of the bill. Delivery is set by your local distribution company, approved by the Alberta Utilities Commission, and is the same whichever retailer you choose:</p>
+<table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Area</th>
+      <th>Delivery: fixed</th>
+      <th>Delivery: per kWh</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Calgary (ENMAX)</strong></td>
+      <td>$0.77/day</td>
+      <td>5.51¢</td>
+    </tr>
+    <tr>
+      <td><strong>Edmonton (EPCOR)</strong></td>
+      <td>$0.73/day</td>
+      <td>5.94¢</td>
+    </tr>
+    <tr>
+      <td><strong>FortisAlberta areas</strong></td>
+      <td>$1.03/day</td>
+      <td>7.62¢</td>
+    </tr>
+    <tr>
+      <td><strong>ATCO Electric areas</strong></td>
+      <td>$1.68/day</td>
+      <td>13.89¢</td>
+    </tr>
+  </tbody>
+</table>
+<p>Where you live changes the bill more than which retailer you pick. At 600 kWh a month, delivery is about $56 in Calgary and about $134 in ATCO Electric areas.</p>
+<br><br>
+<h2>5. Fixed vs. variable charges</h2>
+<ul>
+  <li><strong>Fixed charges:</strong> BC Hydro's basic charge is $0.2344 per day (about $86 a year). Hydro-Québec's system access charge is 46.154¢ per day (about $168 a year). Alberta's delivery fixed charge ranges from $0.73 to $1.68 per day depending on your area.</li>
+  <li><strong>Variable charges:</strong> These are the per-kWh energy and delivery charges, which rise and fall with your consumption.</li>
+  <li><strong>Fixed vs. variable plans (Alberta):</strong> A fixed plan locks in your energy price for a term, while a variable plan floats with the market. The regulated default is fixed by regulation for a set period.</li>
+</ul>
+<br><br>
+<h2>Quick takeaways</h2>
+<ol>
+  <li>There is no "Canadian tariff". The design depends on the province.</li>
+  <li>Ontario rewards timing (TOU and ULO), BC and Québec reward lower total use (tiers), and Alberta rewards shopping around.</li>
+  <li>Ontario's rates reset every Nov 1, and the rebate changes alongside them.</li>
+  <li>In Alberta, delivery charges depend on your area and can outweigh the retailer choice.</li>
+</ol>
+      <p><em></em></p>`
+}
+
+    
+  
+  
+];
+/* ===================== END OF EDITABLE SECTION ===================== */
+
+const $ = id => document.getElementById(id);
+const fmt = d => new Date(d+"T12:00:00").toLocaleDateString("en-CA",{year:"numeric",month:"short",day:"numeric"});
+let activeCat = "All";
+
+/* theme */
+const saved = localStorage.getItem("theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+function setTheme(t){document.documentElement.dataset.theme=t;localStorage.setItem("theme",t);$("themeBtn").textContent=t==="dark"?"☀️":"🌙"}
+setTheme(saved);
+$("themeBtn").onclick=()=>setTheme(document.documentElement.dataset.theme==="dark"?"light":"dark");
+
+/* static content */
+document.title = `${SITE.name} — Professional Journey & News`;
+$("heroTag").textContent = SITE.tag;
+$("heroTitle").innerHTML = SITE.title;
+$("heroText").textContent = SITE.intro;
+$("pName").textContent = SITE.name;
+$("pRole").textContent = SITE.role;
+$("pChips").innerHTML = SITE.skills.map(s=>`<span class="chip">${s}</span>`).join("");
+$("avatar").innerHTML = SITE.photo ? `<img src="${SITE.photo}" alt="${SITE.name}">` : SITE.initials;
+$("links").innerHTML = SITE.links.map((l,i)=>`<a class="btn ${i?'ghost':'primary'}" href="${l.url}" target="_blank" rel="noopener">${l.label}</a>`).join("");
+$("year").textContent = new Date().getFullYear();
+
+$("newsList").innerHTML = [...NEWS].sort((a,b)=>b.date.localeCompare(a.date)).map(n=>
+  `<div class="news-item"><time>${fmt(n.date)}</time><h3>${n.title}</h3><p>${n.text}</p></div>`).join("");
+
+$("timeline").innerHTML = JOURNEY.map(j=>
+  `<div class="t-item"><div class="when">${j.when}</div><h3>${j.role}</h3>${j.org?`<div class="org">${j.org}</div>`:""}<p>${j.text}</p></div>`).join("");
+
+/* about + mentoring */
+$("aboutText").textContent = ABOUT.text;
+$("facts").innerHTML = ABOUT.facts.map(f=>`<li><span class="em">${f.e}</span><span>${f.t}</span></li>`).join("");
+$("helpChips").innerHTML = ABOUT.help.map(h=>`<span class="chip">${h}</span>`).join("");
+$("helpGrid").innerHTML = ABOUT.cards.map(c=>`<div class="help"><h4>${c.t}</h4><p>${c.d}</p></div>`).join("");
+$("mTitle").textContent = MENTORING.title;
+$("mText").textContent = MENTORING.text;
+$("sessions").innerHTML = MENTORING.sessions.map(s=>`<div class="session"><div class="dur">${s.d}</div><h4>${s.t}</h4><p>${s.p}</p></div>`).join("");
+$("bookBtn").href = MENTORING.bookingUrl;
+$("mailBtn").href = `mailto:${MENTORING.email}?subject=${encodeURIComponent("Mentoring session request")}&body=${encodeURIComponent("Hi Nargess,\n\nI'd like to book a mentoring session.\n\nTopic:\nPreferred times:\nBackground:\n")}`;
+$("mHow").innerHTML = MENTORING.how.map(h=>`<span>${h}</span>`).join("");
+
+/* posts */
+const sorted = [...POSTS].sort((a,b)=>b.date.localeCompare(a.date));
+const cats = ["All", ...new Set(sorted.map(p=>p.category))];
+function renderFilters(){
+  $("filters").innerHTML = cats.map(c=>`<button class="filter ${c===activeCat?'active':''}" data-c="${c}">${c}</button>`).join("");
+  document.querySelectorAll(".filter").forEach(b=>b.onclick=()=>{activeCat=b.dataset.c;renderFilters();renderPosts()});
+}
+function renderPosts(){
+  const q = $("search").value.trim().toLowerCase();
+  const list = sorted.filter(p=>(activeCat==="All"||p.category===activeCat) &&
+    (!q || (p.title+p.excerpt+p.content).toLowerCase().includes(q)));
+  $("postList").innerHTML = list.length ? list.map(p=>`
+    <article class="post-card" onclick="location.hash='post/${p.slug}'">
+      <div class="cover" style="background:${p.color}">${p.category}</div>
+      <div class="post-body">
+        <div class="meta">${fmt(p.date)} · ${p.read} read</div>
+        <h3>${p.title}</h3><p>${p.excerpt}</p>
+        <span class="read">Read more →</span>
+      </div></article>`).join("") : `<div class="empty">No posts match your search.</div>`;
+}
+$("search").oninput = renderPosts;
+
+/* routing */
+function showPost(slug){
+  const p = POSTS.find(x=>x.slug===slug); if(!p) return goHome();
+  $("articleBody").innerHTML = `<h1>${p.title}</h1>
+    <div class="meta">${fmt(p.date)} · ${p.read} read · <span class="chip">${p.category}</span></div>
+    <div class="content">${p.content}</div>`;
+  $("home").style.display="none"; $("article").style.display="block";
+  document.title = `${p.title} — ${SITE.name}`; scrollTo(0,0);
+}
+function goHome(e,id){
+  if(e) e.preventDefault();
+  history.replaceState(null,"",id?"#"+id:location.pathname);
+  $("article").style.display="none"; $("home").style.display="block";
+  document.title = `${SITE.name} — Professional Journey & News`;
+  id ? $(id).scrollIntoView() : scrollTo(0,0);
+}
+function route(){
+  const h = location.hash.slice(1);
+  if(h.startsWith("post/")) showPost(h.slice(5));
+  else { $("article").style.display="none"; $("home").style.display="block"; }
+}
+addEventListener("hashchange",route);
+renderFilters(); renderPosts(); route();
+</script>
+</body>
+</html>
