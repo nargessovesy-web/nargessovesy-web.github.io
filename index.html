@@ -339,8 +339,76 @@ const POSTS = [
         <li>Work through open PyPSA examples and rebuild them myself.</li>
         <li>Learn when DC approximations are enough, and when AC power flow matters.</li>
       </ul>
-      <p>I'll post what I learn, including mistakes. <em>()</em></p>`
+      <p>I'll post what I learn, including mistakes. <em></em></p>`
   },
+  {
+    slug:"learnings-electricity-for-data-centers",
+    title:"What I'm learning about electricity for data centers",
+    date:"2026-10-28", category:"Learning", read:"6 min",
+    color:"linear-gradient(135deg,#0891b2,#67e8f9)",
+    excerpt:"Where the power goes, why AI changes the math, and how grids and tariffs are adapting to very large new loads.",
+    content:`
+      <p>Data centers keep coming up in my power-sector conversations, so I've been learning how they interact with the electricity system. These are my working notes, written for people who know energy but are new to this load, or the other way around. I'll keep updating them as I learn more.</p>
+<br><br>
+<h2>1. How big is this, really?</h2>
+<p>Global data center electricity use rose about 17% in 2025 to roughly 485 TWh, according to the International Energy Agency (IEA). The IEA expects it to almost double to around 950 TWh by 2030, which is about 3% of global electricity use. Demand from AI-focused data centers could triple over the same period.</p>
+<p>Context matters here. Data centers are still a small share of total demand globally, but they are growing fast and they are concentrated in a few places. That concentration is what makes them a grid problem rather than just a statistic.</p>
+<br><br>
+<h2>2. Where does the power actually go?</h2>
+<ul>
+  <li><strong>Servers:</strong> About 60% of electricity use on average, and more in AI-focused facilities.</li>
+  <li><strong>Cooling:</strong> From about 7% in efficient hyperscale data centers to over 30% in less efficient enterprise ones.</li>
+  <li><strong>Storage and networking:</strong> Around 5% each, at most.</li>
+  <li><strong>Backup (UPS batteries and generators):</strong> Rarely used, but essential, because data centers must be extremely reliable.</li>
+</ul>
+<p>Takeaway: the computing equipment is the load, and everything else is overhead. That is why the cooling and efficiency conversation matters less than I first assumed.</p>
+<br><br>
+<h2>3. PUE: useful, but running out of room</h2>
+<p><strong>Power usage effectiveness (PUE)</strong> is total facility power divided by IT equipment power. A PUE of 1.0 would mean zero overhead. Hyperscale facilities now often run at around 1.1 to 1.2, compared with an industry average that was historically closer to 1.5 to 1.6.</p>
+<p>The catch is that PUE can't go below 1.0. Going from 1.2 to 1.1 cuts facility power by about 8%, and there is very little left to gain after that. PUE also says nothing about whether the IT power is doing useful work, since a lightly used GPU rack and a busy one can report the same number. For AI, utilisation and useful output per unit of energy matter more.</p>
+<br><br>
+<h2>4. Why AI changes the math</h2>
+<p>Efficiency per AI task is improving quickly, but total use keeps growing because more people and more applications are using AI. At the same time, the power density of racks is rising. The IEA reports that AI server power density rose about elevenfold between 2020 and 2025 and could rise fourfold again by 2027. One advanced rack, roughly the size of a refrigerator, could then draw as much peak power as about 65 households.</p>
+<p>Higher density concentrates the connection problem. It also pushes operators toward liquid cooling, mainly because air can no longer remove the heat, not because it improves PUE.</p>
+<br><br>
+<h2>5. What it means for the grid</h2>
+<p>Data centers are "large step loads". They are typically over 20 MW and connect in big blocks over a short time. That is very different from the gradual demand growth that utilities plan for.</p>
+<ul>
+  <li><strong>Connection queues:</strong> Access to power and grid connections is becoming one of the main factors deciding where new AI capacity gets built. Equipment supply chains for transformers and gas turbines are also under pressure.</li>
+  <li><strong>Uncertainty:</strong> Not every announced project gets built, so planners treat data centers as a volatile growth area and track them separately from steadier drivers like population growth.</li>
+  <li><strong>Reliability:</strong> Operators themselves cite limited power availability and falling grid reliability as growing concerns.</li>
+</ul>
+<br><br>
+<h2>6. Where does the electricity come from?</h2>
+<p>The IEA expects renewables to meet nearly half of the additional data center demand by 2030, with natural gas and coal together meeting over 40%. After 2030, small modular reactors (SMRs) are expected to start contributing baseload low-emissions power. Tech companies are also becoming major buyers of renewable power through long-term power purchase agreements (PPAs).</p>
+<br><br>
+<h2>7. Two examples: Ontario and the UK</h2>
+<p><strong>Ontario:</strong> The IESO's 2026 Annual Planning Outlook forecasts Ontario demand growing by 65%, with data centers making up about 8.6% of demand in 2050. Proposed data center connection requests could exceed 10,000 MW, against a provincial peak of roughly 25,000 MW. The province has responded with Bill 40, a draft Data Centre Playbook, and technical standards for large computational loads. It is also exploring a separate Global Adjustment rate class for new data centers, and removing their ability to join the Industrial Conservation Initiative, which lets large customers lower costs by cutting demand at peak hours.</p>
+<p><strong>UK:</strong> The government's AI Growth Zones aim to remove two barriers to data center investment: slow planning and delays in getting power. It also wants to lower operating costs for data centers in zones where extra demand helps the efficiency of the energy system. Five zones have been designated so far.</p>
+<br><br>
+<h2>8. How tariffs are adapting</h2>
+<p>This is the part I find most interesting as a tariff person. Utilities and regulators are building large-load tariffs, electric service agreements and special contracts. The goal is to protect other customers from the risk of underused investments and insufficient supply, while still letting big loads connect. Berkeley Lab's 2026 review describes how these terms and rate structures are evolving in the US, and one tracker lists nearly 300 large-load tariff filings.</p>
+<p>The core idea connects to the fixed vs. variable charges from my earlier posts. If a utility builds network capacity for a customer and that customer then uses much less than planned, the cost of unused capacity falls on everyone else. Large-load tariffs try to prevent that.</p>
+<br><br>
+<h2>My main takeaways</h2>
+<ol>
+  <li>The demand is real, but forecasts are uncertain, so planners track data centers separately.</li>
+  <li>Efficiency gains are slowing, and PUE is nearly maxed out.</li>
+  <li>The bottleneck is increasingly grid access and equipment, not just generation.</li>
+  <li>Tariff and connection rules are becoming the main way regulators manage risk.</li>
+  <li>Flexibility is a big open question, meaning how much of this load can shift or reduce at peak times.</li>
+</ol>
+<br><br>
+<h2>What I want to learn next</h2>
+<ul>
+  <li>How flexible data center load can really be, and what it is worth to the system.</li>
+  <li>How "bring your own generation" and co-located supply change tariff design.</li>
+  <li>How emerging markets will handle data center demand, given constrained grids.</li>
+</ul>
+      <p><em></em></p>`
+},
+
+
   {
     slug:"big4-to-advisory",
     title:"From a Big 4 firm to infrastructure advisory",
